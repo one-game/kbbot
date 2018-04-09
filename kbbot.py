@@ -26,10 +26,22 @@ class KBBot(object):
     '''
 
     def __init__(self):
+    	self._bot = aiml.Kernel()
+    	self._bot.bootstrap(learnFiles="std-startup.xml", commands="load aiml b")
         pass
 
     def get_response(self, question, user_id="__global"):
         
+        #todo: preprocess question
+
+        #todo: parse question
+        parse_result = self._bot.respond(question, user_id)
+
+        self._bot.setPredicate("question_parsed", 1)
+        #todo: to answer the question
+        answer = self._bot.respond(question, user_id)
+        #todo: post process the answer
+
         pass
 
 
