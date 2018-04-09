@@ -1,0 +1,37 @@
+<aiml version="2.0" encoding="UTF-8">
+<!-- basic_chat_cn.aiml -->
+
+    <category>
+        <pattern>你 好</pattern>
+        <template>
+            你好!<get name="welcome"/>
+        </template>
+    </category>
+ 
+    <category>
+        <pattern>你 好 吗 *</pattern>
+        <template>
+            我很好，谢谢你，<star/>!
+        </template>
+    </category>
+	
+	
+
+	<category>
+        <pattern>ONE TIME I*</pattern>
+        <template>
+            <random>
+                <li>Go on.</li>
+                <li>How old are you?</li>
+                <li>Be more specific.</li>
+                <li>I did not know that.</li>
+                <li>Are you telling the truth?</li>
+                <li>I don't know what that means.</li>
+                <li>Try to tell me that another way.</li>
+                <li>Are you talking about an animal, vegetable or mineral?</li>
+                <li>What is it?</li>
+            </random>
+        </template>
+    </category>
+	
+</aiml>
